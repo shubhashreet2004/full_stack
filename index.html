@@ -4,8 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    
+<ul>
+  <li><a href="#home">Home</a></li>
+  <li><a href="#news">News</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li style="float:right"><a class="active" href="#about">About</a></li>
+</ul>
+    <p>
+        My favourite sports!!!
+    </p>
     <ol>
         <li>handball</li>
         <li>volleyball</li>
@@ -13,5 +24,67 @@
         <li>football</li>
     </ol>
     <a href="body.html">click here</a>
+   <div class="page">
+       <p>page1</p>
+   </div>
+    <div class="page">
+         <p>page2</p>
+    </div>
+    <div class="container">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>  
+  <div>4</div>
+  <div>5</div>
+  <div>6</div> </div>
+  
+  <label for="name">Name:</label> 
+  <input type="text" id="name">
+  <button onclick="hi()">submit</button>
+  <div id="greet"></div>
+  <br>
+  <h1>Rock paper scissor</h1>
+  <button onclick="game('rock')">ROCK</button>
+  <button onclick="game('paper')">PAPER</button>
+  <button onclick="game('scissor')">SCISSOR</button>
+  <script>
+    console.log("5");
+    console.log(5==="5");
+    console.log(23%3);
+    function sub(a,b){
+        return a-b;
+    }
+    function print(name,age){
+        return `hi ${name} ${age} !!!`;
+    }
+    console.log(sub(8,3));
+    console.log(print('suba',20));
+    function hi(){
+        const name=document.getElementById('name').value;
+        document.getElementById('greet').innerText=`Hello, ${name}`;
+    }
+
+    function game(choice) {
+            const choices = ['rock', 'paper', 'scissor'];
+            const computerChoice = choices[Math.floor(Math.random() * 3)];
+            let result;
+
+            if (choice === computerChoice) {
+                result = "It's a tie!";
+            } else if (
+                (choice === 'rock' && computerChoice === 'scissor') ||
+                (choice === 'paper' && computerChoice === 'rock') ||
+                (choice === 'scissor' && computerChoice === 'paper')
+            ) {
+                result = `You win! Computer chose ${computerChoice}.`;
+            } else {
+                result = `You lose! Computer chose ${computerChoice}.`;
+            }
+
+            alert(result);
+        }
+
+  </script>
+</div>
 </body>
 </html>
