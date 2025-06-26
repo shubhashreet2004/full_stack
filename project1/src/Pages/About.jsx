@@ -3,11 +3,11 @@ import { Link } from 'react-router-dom';
 import { UserContext } from './hooks/UserContext';
 
 const About = () => {
-    const { name } = useContext(UserContext) || {};
+    const { name = 'Guest' } = useContext(UserContext) || {};
 
     return (
         <div>
-            <h1>Hi! {name || 'Guest'}</h1>
+            <h1>Hi! {name}</h1>
             <nav>
                 <Link to="/state">UseState Example</Link><br />
                 <Link to="/form">Controlled Form</Link><br />

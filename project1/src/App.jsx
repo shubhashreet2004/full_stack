@@ -13,6 +13,7 @@ import State from './hooks/State'
 import Form from './hooks/Form'
 import Effects from './hooks/Effects'
 import Reducer from './hooks/Reducer'
+import { UserContext } from "./hooks/UserContext";
 
 function App() {
   const [count, setCount] = useState(0)
@@ -22,8 +23,8 @@ function App() {
     <Navbar/>
     <Routes>
        <Route path='/' element={<Home/>}/>
-       <Route path='/About' element={<About/>}/>
-       <Route path='/Service' element={<Service/>}/>
+       <Route path='/about' element={<About/>}/>
+       <Route path='/service' element={<Service/>}/>
        <Route path='/state' element={<State/>}/>
        <Route path='/form' element={<Form/>}/>
        <Route path='/effect' element={<Effects/>}/>

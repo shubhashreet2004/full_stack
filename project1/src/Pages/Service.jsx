@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { InfoContext } from './hooks/InfoContext';
+import { InfoContext } from '../hooks/InfoContext'; // Adjust path if needed
 
 const Service = () => {
     const info = useContext(InfoContext)
